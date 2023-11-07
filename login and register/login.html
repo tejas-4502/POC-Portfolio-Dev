@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/signup</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row header">
+            <header class="login">
+                <h2>Also visit these portfolios</h2>
+            </header>
+        </div>
+
+        <div class="container wrapper">
+            <table class="table table-bordered table-hover" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Sr.no.</th>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>Office Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td><a href="https://github.com/tejas-4502/POC-Portfolio-Dev" target="_blank">Tejas Sonawane</a>
+                        </td>
+                        <td>GTE</td>
+                        <td>Pune</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td><a href="https://github.com/Dipakborbale/Portfolio_website" target="_blank">Dipak
+                                Borbale</a></td>
+                        <td>GTE</td>
+                        <td>Pune</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td><a href="https://github.com/Shashikant6633/Portfolio_Website" target="_blank">Shashikant
+                                Shinde</a></td>
+                        <td>GTE</td>
+                        <td>Pune</td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td><a href="https://github.com/vipulsawant033/Portfolio_Vipul" target="_blank">Vipul Sawant</a>
+                        </td>
+                        <td>GTE</td>
+                        <td>Pune</td>
+                    </tr>
+                    <tr>
+                        <td>005</td>
+                        <td><a href="https://github.com/tejas-4502/dummy-port/blob/main/jaideep" target="_blank">Jaideep Reddy</a></td>
+                        <td>GTE</td>
+                        <td>Hyderabad</td>
+                    </tr>
+                    <tr>
+                        <td>006</td>
+                        <td><a href="https://github.com/tejas-4502/dummy-port/blob/main/pranay" target="_blank">Pranay Manthri</a></td>
+                        <td>GTE</td>
+                        <td>Hyderabad</td>
+                    </tr>
+                    <tr>
+                        <td>007</td>
+                        <td><a href="https://github.com/tejas-4502/dummy-port/blob/main/manisri" target="_blank">Manisri Chippa</a></td>
+                        <td>GTE</td>
+                        <td>Hyderabad</td>
+                    </tr>
+                    <tr>
+                        <td>008</td>
+                        <td><a href="https://github.com/tejas-4502/dummy-port/blob/main/sahithi" target="_blank">Sahithi Chowdarapu</a></td>
+                        <td>GTE</td>
+                        <td>Hyderabad</td>
+                    </tr>
+                    <tr>
+                        <td>009</td>
+                        <td><a href="https://github.com/tejas-4502/dummy-port/blob/main/sindhuja" target="_blank">Sindhuja Dasoju</a></td>
+                        <td>GTE</td>
+                        <td>Hyderabad</td>
+                    </tr>
+                    <tr>
+                        <td>010</td>
+                        <td><a href="https://github.com/tejas-4502/dummy-port/blob/main/ambika" target="_blank">Ambika Losara</a></td>
+                        <td>Senior Software Engineer</td>
+                        <td>Hyderabad</td>
+                    </tr>
+                    <tr>
+                        <td>011</td>
+                        <td><a href="https://github.com/tejas-4502/dummy-port/blob/main/sumedh" target="_blank">Sumedh G</a></td>
+                        <td>Senior Software Engineer</td>
+                        <td>Hyderabad</td>
+                    </tr>
+                    <tr>
+                        <td>012</td>
+                        <td><a href="https://github.com/tejas-4502/dummy-port/blob/main/sushil" target="_blank">Sushil Pai</a></td>
+                        <td>Project Manager Application Development</td>
+                        <td>Bangalore</td>
+                    </tr>
+                    <tr>
+                        <td>013</td>
+                        <td><a href="https://github.com/tejas-4502/dummy-port/blob/main/narender" target="_blank">Narendar Kota</a></td>
+                        <td>Senior Delivery Manager</td>
+                        <td>Hyderabad</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="lobut">
+        <button id="but" onclick="document.getElementById('id01').style.display='block'"
+            style="width:auto;">Login</button>
+        <button id="but2" onclick="document.getElementById('id02').style.display='block'"
+            style="width:auto;">Register</button>
+    </div>
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="/images/avatar.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b>*</label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b>*</label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+
+                <button type="submit">Login</button>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+    <div id="id02" class="modal">
+        <form id="form" class="modal-content" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+            </div>
+            <div class="container">
+                <h1>Register</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                <div class="input-control">
+                    <label for="email" style="color: black;"><b>Email</b>*</label>
+                    <input id="email" type="text" placeholder="Enter Email" name="email">
+                    <div class="error"></div>
+                </div>
+
+                <div class="input-control">
+                    <label for="uname" style="color: black;"><b>Username</b>*</label>
+                    <input id="username" type="text" placeholder="Enter Username" name="uname">
+                    <div class="error"></div>
+                </div>
+
+                <label for="birthdate"><b>Birthdate</b></label>
+                <input type="date" id="birthday" name="birthday" max="2023-10-13">
+
+                <label for="address"><b>Address</b></label>
+                <textarea name="address" placeholder="Enter your address" rows="2"></textarea>
+
+                <label for="gender"><b>Gender</b></label>
+                <select name="gender" id="gender">
+                    <option>--select your gender--</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="country"><b>Country:-</b></label>
+                <input type="radio" id="india" name="country" value="India">
+                <label for="india">India</label>
+                <input type="radio" id="other" name="country" value="Other">
+                <label for="other">Other</label><br><br>
+
+                <label for="photo"><b>Passport photo:-</b></label>
+                <input type="file" id="myfile" name="myfile" accept="image/*">
+
+                <div class="input-control">
+                    <label for="psw" style="color: black;"><b>Password</b>*</label>
+                    <input id="password" type="password" placeholder="Enter Password" name="psw"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+                    <div class="error"></div>
+                </div>
+
+                <!-- <div class="input-control"></div>
+                <label for="psw-repeat" style="color: black;"><b>Repeat Password</b></label>
+                <input id="password2" type="password" placeholder="Repeat Password" name="psw-repeat">
+                <div class="error"></div>
+            </div> -->
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px" required>
+                Remember me
+            </label>
+
+            <p>By creating an account you agree to our <a href="/files/requirement.txt" target=""
+                    style="color:dodgerblue">Terms &
+                    Privacy</a>.</p>
+
+            <div class="clearfix">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn">Register</button>
+            </div>
+    </div>
+    </form>
+    </div>
+
+    <div class="Guest">
+        <a href="/portfolio.html">Continue as Guest...</a>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+Develop a portfolio website using VS code/Studio as IDE
+
+
+- The Website should include (Left nav bar, breadcrumb menu, Top navigation) as master layout
+- The main body can have login/sign-up section and a table of all portfolios from the website
+- Registration form to have all types of valid inputs on a web-page(text, multi-line text, date, 
+	drop-down, radio, checkbox, hyperlink, attachments, image). Include null validations, conditional 
+	validations, date range validations, number validations, number range validations, character limit 
+	validations.
+- The table of portfolios can have pagination, search to be in place.
+
+ 
+- Left navigation must have atleast one of the apps in it. Multiple will get brownie points
+	1. Calculator (Manisri, pranay)
+	2. Stopwatch (Tejas)
+	3. Digital clock (Dipak, Jaideep, Sindhuja)
+	4. Real-time weather from 3rd party(Vipul)
+	5. Counter(Sahithi, Shashikant)
+
+ 
+- Upon click of a portfolio, implement 1 of the below 
+	1. have a carousel of images with different styles (Pune)
+	2. Slideshow of images with different styles (Hyderabad)

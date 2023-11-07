@@ -1,0 +1,701 @@
+/* css for top and side nav */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eff2f5;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.sideBar {
+    position: relative;
+    z-index: 20;
+    height: 100vh;
+    width: 25%;
+    color: white;
+    background-color: #001629;
+    transition: 0.3s ease-in-out;
+}
+
+.sideBar.widthChange {
+    width: 8%;
+    text-align: center;
+}
+
+.sideBar img {
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sideBar div {
+    position: relative;
+    height: 10vh;
+    background-color: #ffffff;
+}
+
+.sideBar li {
+    padding: 20px 20px 20px 10px;
+    transition: 0.3s ease-in-out;
+}
+
+li label.hideMenuList {
+    display: none;
+}
+
+.sideBar li i {
+    margin-right: 8px;
+}
+
+.sideBar li:hover {
+    background-color: #0092ff;
+}
+
+.selected {
+    background-color: #0092ff;
+}
+
+.sideBar span {
+    position: absolute;
+    color: #ffffff;
+    top: 20px;
+    right: 20px;
+}
+
+.sideBar .cross-icon {
+    display: none;
+    color: #001629;
+}
+
+.sidebar-header {
+    display: flex;
+}
+
+.content {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    background-color: #ffffff;
+    height: 10%;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mobile {
+    display: none;
+}
+
+.menu-button {
+    position: relative;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.menu-button div:nth-child(1) {
+    position: absolute;
+    height: 4px;
+    border-radius: 20px;
+    background-color: #c7c7c7;
+    width: 100%;
+}
+
+.menu-button div:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    border-radius: 20px;
+    background-color: #c7c7c7;
+    width: 80%;
+}
+
+.menu-button div:nth-child(3) {
+    position: absolute;
+    height: 4px;
+    border-radius: 20px;
+    bottom: 0;
+    background-color: #c7c7c7;
+    width: 100%;
+}
+
+header img {
+    height: 40px;
+    border-radius: 100%;
+}
+
+header h1 {
+    color: #0092ff;
+}
+
+.content-data {
+    background-color: #ffffff;
+    margin: 2%;
+    padding: 20px;
+    height: 84%;
+    overflow-y: auto;
+}
+
+.sideBar.showMenu {
+    left: 0;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0092ff;
+}
+
+@media(max-width:1200px) {
+    .sideBar {
+        width: 30%;
+    }
+}
+
+@media(max-width:900px) {
+    #desktop {
+        display: none;
+    }
+
+    #mobile {
+        display: block;
+    }
+
+    .sideBar {
+        position: absolute;
+        width: 30%;
+        top: 0;
+        left: -100%;
+    }
+
+    .sideBar .cross-icon {
+        display: block;
+    }
+
+    .backdrop {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.4);
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .backdrop.showBackdrop {
+        left: 0;
+    }
+}
+
+@media(max-width:700px) {
+    .sideBar {
+        width: 40%;
+    }
+}
+
+@media(max-width:400px) {
+    .sideBar {
+        width: 60%;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    #mobile {
+        height: 25px;
+    }
+}
+
+@media(max-width:320px) {
+    .sideBar {
+        width: 80%;
+    }
+}
+
+/* h3 heading of section css and for sectons*/
+h3 {
+    text-align: center;
+    font-size: 250%;
+    color: #763053;
+}
+
+section#home,
+section#projects {
+    margin-bottom: 7%;
+}
+
+
+/* home css and also about css*/
+.column {
+    float: left;
+    width: 33.32%;
+    padding: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.column1 {
+    float: left;
+    width: 66.66%;
+    padding: 5px;
+}
+
+div.row {
+    width: 101.1%;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+
+    .column,
+    .column1 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* projects css */
+div.card.h-100 {
+    float: left;
+    width: 33.32%;
+    padding: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+img.card-img-top {
+    width: 100%;
+}
+
+h5 {
+    font-size: 150%;
+    margin-top: 3%;
+}
+
+p {
+    font-size: 120%;
+}
+
+@media screen and (max-width: 500px) {
+
+    div.card.h-100 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* skills css */
+.slider-container {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    box-shadow: 1px 1px 2px white, -1px -1px 2px white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+}
+
+h6 {
+    font-size: 200%;
+    text-align: center;
+}
+
+img.sk {
+    width: 15%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.previous,
+.next {
+    cursor: pointer;
+    position: absolute;
+    margin: 0 -70px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: darkred;
+    user-select: none;
+    font-size: 40px;
+    transition: 0.7s ease;
+}
+
+.next {
+    right: 0;
+}
+
+.previous:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 500px) {
+
+    div.slider-container {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* css for contact form */
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.icons li {
+    position: relative;
+    margin-left: 10px;
+    height: 70px;
+    width: 70px;
+    overflow: hidden;
+    background: #071122;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: inset -1px -1px 2px white, inset 1px 1px 2px white;
+}
+
+.icons li a i {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+
+.icons li::before {
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 200%;
+    width: 200%;
+    bottom: 150%;
+    left: -50%;
+    transform: rotate(50deg);
+}
+
+.icons li:hover::before {
+    animation: slide 1s linear;
+    animation-fill-mode: forwards;
+}
+
+.icons li:hover .fa-twitter {
+    color: #00acee;
+}
+
+.icons li:hover .fa-linkedin-in {
+    color: #0e76a8;
+}
+
+.icons li:hover .fa-github {
+    color: #333;
+}
+
+@keyframes slide {
+    0% {}
+
+    25% {
+        bottom: 0%;
+    }
+
+    75% {
+        bottom: 80%;
+        transform: rotate(60deg);
+    }
+
+    100% {
+        bottom: -50%;
+    }
+}
+
+/* stopwatch css */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h1.sw {
+    font-size: 200%;
+    color: darkolivegreen;
+}
+
+.digit {
+    font-size: 150px;
+    color: black;
+}
+
+.txt {
+    font-size: 30px;
+    color: black;
+}
+
+#buttons {
+    margin-top: 50px;
+}
+
+.btn {
+    width: 100px;
+    padding: 10px 15px;
+    margin: 0px 20px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.5s;
+    color: white;
+    font-weight: 500;
+}
+
+div#time {
+    border-style: solid;
+    border-color: #001629;
+    padding: 10px;
+}
+
+#start {
+    background-color: red;
+}
+
+#stop {
+    background-color: green;
+}
+
+#reset {
+    background-color: blue;
+}
+
+/* digital clock css */
+.clock {
+    top: 50%;
+    left: 50%;
+    color: goldenrod;
+    font-size: 110px;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+    border-style: solid;
+    border-color: grey;
+    padding: 10px;
+}
+
+/* weather css */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    margin-top: 0%;
+    width: 90%;
+    max-width: 470px;
+    text-align: center;
+}
+
+.search input {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.search input:active,
+:focus {
+    outline: none;
+}
+
+.button {
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-top: 10px;
+    gap: 4rem;
+}
+
+.col {
+    flex: 1;
+}
+
+.weather {
+    display: none;
+}
+
+/* responsive media querys */
+@media screen and (max-width: 425px) {
+    a.previous {
+        margin-left: -65%;
+    }
+
+    a.next {
+        margin-right: -15%;
+    }
+
+    div.slider {
+        font-size: 80%;
+    }
+
+    section#skills {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    section#skills {
+        width: 80%;
+        margin-bottom: 20%;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    div#MyClockDisplay.clock {
+        width: 100%;
+        font-size: 250%;
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+    span#hr.digit,
+    span#min.digit,
+    span#sec.digit,
+    span#count.digit,
+    span.txt {
+        width: 30%;
+        font-size: 180%;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+    button#start.btn,
+    button#stop.btn,
+    button#reset.btn {
+        font-size: 100%;
+        margin: 0%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* temp needs enhancement */
+
+@media screen and (max-width: 375px) {
+
+    button#start.btn,
+    button#stop.btn,
+    button#reset.btn {
+        margin: 0px -7px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    button#start.btn,
+    button#stop.btn,
+    button#reset.btn {
+        padding-left: 0%;
+        margin: 0px -17px;
+    }
+}
